@@ -1,19 +1,21 @@
 // rfc단축키 사용.
-import React, { useEffect} from 'react'
+import React, { useState, useEffect} from 'react'
 
-// props로 넘겨 받는 방법1
-// export default function Counter(props) {
-// App에서 props로 받는 경우
-// const { number, setNumber } = props
-
-// props로 넘겨 받는 방법2(Destructuring문법)
-export default function Counter( {number, setNumber} ) {
+// 내부에서 로컬스테이트를 선언하는 경우.
+export default function Counter() {
 	// JS
 	// Counter에서 local state를 선언하는 경우.
 
+	// const { number, setNumber } = props
+	const [number, setNumber] = useState(0)
+
+	// App에서 props로 받는 경우
+
+
+
 	// local state : 컴포넌트 안에서 관리되는 state. 컴포넌트가 사라지면 같이 사라지는 state. useState로 관리한다.
 
-	// useEffect를 사용해서 lifeCycle Method
+	// useEffect를 사용해서 lifeCycle
 	// Mount : 컴포넌트가 렌더링된 시점.
 	useEffect(() => {	// ()는 함수를 넣어라.
 		console.log('Mounted!')
